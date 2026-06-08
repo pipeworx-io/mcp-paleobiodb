@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-paleobiodb",
+  "version": "0.1.0",
+  "description": "Paleobiology Database (PBDB) MCP — the global fossil record. Keyless.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "paleobiodb"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-paleobiodb"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
