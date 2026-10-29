@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-paleobiodb",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Paleobiology Database (PBDB) MCP — the global fossil record. Keyless.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-paleobiodb": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "paleobiodb"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-paleobiodb.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/paleobiodb",
   "pipeworx": {
-    "sourceHash": "v1-109ed7ab2e2b5fb24ae3709d0e3481a1bece2e1c5c2a5752573c530fe1a48678",
-    "sourceCommit": "f54ad77e789f27fe393978f9c080b5b18c87bb4f"
+    "mode": "gateway",
+    "slug": "paleobiodb",
+    "gatewaySlug": "paleobiodb",
+    "sourceHash": "v1-a8e56ca60fa91e56345d90ae0db4607dca2a9a04bccf59a9babf17d3f5cc3092",
+    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
   }
 }

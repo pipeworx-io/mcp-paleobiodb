@@ -1,0 +1,66 @@
+[
+  {
+    "name": "find_fossils",
+    "description": "Find fossil occurrences for a taxon from the Paleobiology Database (the global fossil record). Returns occurrences with collection locations (lat/lng, country) and geologic ages. base_name matching includes the taxon and all of its subtaxa. Ages are in millions of years (Ma). Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "taxon": {
+          "type": "string",
+          "description": "Taxon name, e.g. \"Tyrannosaurus\" or \"Mammalia\". Matches the taxon and all subtaxa."
+        },
+        "interval": {
+          "type": "string",
+          "description": "Geologic time interval (period/epoch) to filter by, e.g. \"Cretaceous\"."
+        },
+        "country": {
+          "type": "string",
+          "description": "Two-letter country code to filter by, e.g. \"US\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max occurrences to return (default 20, max 100)."
+        }
+      },
+      "required": [
+        "taxon"
+      ]
+    }
+  },
+  {
+    "name": "get_taxon",
+    "description": "Look up a single taxon in the Paleobiology Database: its taxonomic rank, attribution (author + year), first/last appearance intervals and ages (in millions of years, Ma), and number of subtaxa. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Taxon name to look up, e.g. \"Tyrannosaurus rex\"."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "list_subtaxa",
+    "description": "List the direct child taxa (subtaxa) of a taxon from the Paleobiology Database, with each child's rank and number of its own subtaxa. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "taxon": {
+          "type": "string",
+          "description": "Parent taxon name, e.g. \"Tyrannosauridae\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max subtaxa to return (default 30)."
+        }
+      },
+      "required": [
+        "taxon"
+      ]
+    }
+  }
+]
