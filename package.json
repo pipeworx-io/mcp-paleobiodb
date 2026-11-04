@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-paleobiodb",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Paleobiology Database (PBDB) MCP — the global fossil record. Keyless.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "paleobiodb",
     "gatewaySlug": "paleobiodb",
-    "sourceHash": "v1-a8e56ca60fa91e56345d90ae0db4607dca2a9a04bccf59a9babf17d3f5cc3092",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-edfb55ccb72d87868f401d4c018783bafa270775fc1b668c0405a94404fced9e",
+    "sourceCommit": "243a06a6ca2d3b6075325f3b66a1468d0a2eb603"
   }
 }
